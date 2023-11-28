@@ -1,2 +1,2 @@
-"use strict";
+"use strict";var darkThemeMq=window.matchMedia("(prefers-color-scheme: dark)"),dark=document.getElementById("dark"),light=document.getElementById("light");darkThemeMq.matches?dark.setAttribute("checked",""):light.setAttribute("checked","");
 //# sourceMappingURL=script.js.map

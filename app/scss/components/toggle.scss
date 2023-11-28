@@ -2,27 +2,73 @@
 
 .toggle {
     border: none;
+    border-top: 2px solid var(--dark-card);
+    display: flex;
+    gap: rem(18);
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(24);
+    padding-top: rem(16);
+    cursor: default;
 
-    // &__wrapper {
-       
-    // }
 
-    // input[type="radio"] {
-        
-    // }
-
-    // $__background {
-       
-    // }
-
-    &__button {
-        width: rem(16);
-        height: rem(16);
-        border-radius: 50%;
-        background-color: var(--light-toggle);
+    @include breakpoint(medium) {
+        border: none;
+        margin-top: 0;
+        padding-top: 0;
     }
 
-    // label {
-        
-    // }
+    &__wrapper {
+        height: rem(24);
+        width: rem(48);
+        position: relative;
+    }
+
+    input[type="radio"] {
+        opacity:0;
+        margin: 0 -2px 0 0;
+        width: rem(20);
+        height: rem(20);
+    }
+
+    &__background {
+        display: block;
+        background: linear-gradient(225deg, var(--dark-toggle-end), var(--dark-toggle-start));
+        border-radius: rem(12);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        pointer-events: none;
+    }
+
+    &__button {
+        position: absolute;
+        left: rem(3);
+        top: rem(3);
+        width: rem(18);
+        height: rem(18);
+        border-radius: 50%;
+        background-color: var(--dark-card);
+        transition: all 150ms ease-in-out;
+    }
+
+    #light:checked ~ .toggle__button {
+        left: calc(100% - rem(21));
+    }
+
+    label {
+        &[for="dark"] {
+            font-size: rem(14);
+            font-weight: 700;
+            color: var(--dark-white-text);
+        }
+        &[for="light"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            left: -10000px;
+            opacity: 0;
+        }
+    }
 }
