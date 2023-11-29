@@ -44,3 +44,21 @@
         --card-hover: var(--light-card-hover);
     }
  }
+
+ .body.dark {
+    --background: var(--dark-bg);
+    --text-main: var(--dark-white-text);
+    --text-sec: var(--dark-blue-text);
+    --toggle: var(--dark-toggle);
+    --card: var(--dark-card);
+    --card-hover: var(--dark-card-hover);       
+ }
+
+ .body.light {
+    --background: var(--light-bg);
+    --text-main: var(--light-blue-text);
+    --text-sec: var(--light-gray-text);
+    --toggle: var(--light-toggle);
+    --card: var(--light-card);
+    --card-hover: var(--light-card-hover);
+ }
