@@ -10,6 +10,16 @@
     text-align: center;
     padding: rem(25);
 
+    &__small{
+        display: grid;
+        gap: 0 rem(16);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        font-size: rem(14);
+        font-weight: bold;
+        text-align: left;
+    }
+
     &--facebook {
         border-top: rem(4) solid var(--facebook);
     }
@@ -63,7 +73,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: rem(2);
+        gap: rem(4);
         font-size: rem(12);
         font-weight: bold;
 
@@ -71,8 +81,22 @@
             color: var(--limegreen);
         }
 
+        &--smUp {
+            color: var(--limegreen);
+            justify-content: flex-end;
+        }
+
         &--down {
             color: var(--brightred);
         }
+
+        &--smDown {
+            color: var(--brightred);
+            justify-content: flex-end;
+        }
     }
+}
+
+.icon {
+    text-align: right;
 }

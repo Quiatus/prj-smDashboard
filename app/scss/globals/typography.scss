@@ -28,3 +28,9 @@ a:visited,
 a:active {
     text-decoration: none;
 }
+
+.big-text{
+    font-size: rem(32);
+    font-weight: bold;
+    color: var(--dark-white-text);
+}
