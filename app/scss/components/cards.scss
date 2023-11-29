@@ -97,6 +97,10 @@
     }
 }
 
+.card:hover {
+    background-color: var(--dark-card-hover);
+}
+
 .icon {
     text-align: right;
 }
