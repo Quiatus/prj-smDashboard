@@ -1,14 +1,20 @@
 @use '../util/' as *;
 
 .card {
-    background-color: var(--dark-card);
-    color: var(--dark-blue-text);
+    background-color: var(--card);
+    color: var(--text-sec);
     border-radius: rem(5);
     width: 100%;
     position: relative;
     overflow: hidden;
     text-align: center;
     padding: rem(25);
+    transition: background-color 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--card-hover);
+    }
 
     &__small{
         display: grid;
@@ -54,7 +60,7 @@
     }
 
     &__count {
-        color: var(--dark-white-text);
+        color: var(--text-main);
         font-size: rem(56);
         font-weight: bold;
         margin-bottom: rem(25);
@@ -63,7 +69,7 @@
 
     &__label {
         font-size: rem(12);
-        color: var(--dark-blue-text);
+        color: var(--text-sec);
         font-weight: normal;
         text-transform: uppercase;
         letter-spacing: rem(5);
@@ -95,10 +101,6 @@
             justify-content: flex-end;
         }
     }
-}
-
-.card:hover {
-    background-color: var(--dark-card-hover);
 }
 
 .icon {
